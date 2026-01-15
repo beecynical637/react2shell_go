@@ -1,8 +1,13 @@
+````markdown
+██████╗  ██████╗     ██████╗ ███████╗ █████╗  ██████╗████████╗██████╗ ███████╗██╗  ██╗███████╗██╗     ██╗     
+██╔════╝ ██╔═══██╗    ██╔══██╗██╔════╝██╔══██╗██╔════╝╚══██╔══╝╚════██╗██╔════╝██║  ██║██╔════╝██║     ██║     
+██║  ███╗██║   ██║    ██████╔╝█████╗  ███████║██║        ██║    █████╔╝███████╗███████║█████╗  ██║     ██║     
+██║   ██║██║   ██║    ██╔══██╗██╔══╝  ██╔══██║██║        ██║   ██╔═══╝ ╚════██║██╔══██║██╔══╝  ██║     ██║     
+╚██████╔╝╚██████╔╝    ██║  ██║███████╗██║  ██║╚██████╗   ██║   ███████╗███████║██║  ██║███████╗███████╗███████╗
+ ╚═════╝  ╚═════╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+                                                                                          by beecynical637
+
 # React2Shell Scanner
-
-**CVE-2025-55182 & CVE-2025-66478**
-
-Based on research from the Assetnote Security Research Team.
 
 ## Features
 
@@ -86,9 +91,9 @@ When using `--shell`, additional commands are available:
 
 - `!download <remote> <local>` - Download file from target
 - `!upload <local> <remote>` - Upload file to target
-- `!revshell <ip> <port>` - Send reverse shell
-- `!sysinfo` - Get system information
-- `exit` / `quit` - Exit shell
+– `!revshell <ip> <port>` - Send reverse shell
+– `!sysinfo` – Get system information
+– `exit` / `quit` – Exits shell
 
 ## Options
 
@@ -122,11 +127,12 @@ When using `--shell`, additional commands are available:
 
 ## Environment Variables
 
-Configure defaults via `.env` file:
+Configure defaults via the `.env ` file:
 
 ```env
 R2S_TIMEOUT=10
 R2S_THREADS=10
 R2S_VERIFY_SSL=false
 R2S_WAF_BYPASS_SIZE=128
-```
+````
+
