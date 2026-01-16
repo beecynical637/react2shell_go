@@ -1,4 +1,4 @@
-````markdown
+```
 ██████╗  ██████╗     ██████╗ ███████╗ █████╗  ██████╗████████╗██████╗ ███████╗██╗  ██╗███████╗██╗     ██╗     
 ██╔════╝ ██╔═══██╗    ██╔══██╗██╔════╝██╔══██╗██╔════╝╚══██╔══╝╚════██╗██╔════╝██║  ██║██╔════╝██║     ██║     
 ██║  ███╗██║   ██║    ██████╔╝█████╗  ███████║██║        ██║    █████╔╝███████╗███████║█████╗  ██║     ██║     
@@ -6,6 +6,7 @@
 ╚██████╔╝╚██████╔╝    ██║  ██║███████╗██║  ██║╚██████╗   ██║   ███████╗███████║██║  ██║███████╗███████╗███████╗
  ╚═════╝  ╚═════╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
                                                                                           by beecynical637
+```
 
 # React2Shell Scanner
 
@@ -91,9 +92,9 @@ When using `--shell`, additional commands are available:
 
 - `!download <remote> <local>` - Download file from target
 - `!upload <local> <remote>` - Upload file to target
-– `!revshell <ip> <port>` - Send reverse shell
-– `!sysinfo` – Get system information
-– `exit` / `quit` – Exits shell
+- `!revshell <ip> <port>` - Send reverse shell
+- `!sysinfo` - Get system information
+- `exit` / `quit` - Exits shell
 
 ## Options
 
@@ -125,14 +126,15 @@ When using `--shell`, additional commands are available:
 | `--path-file`         | File with paths to test                        |
 | `-H`                  | Custom header                                  |
 
-## Environment Variables
-
-Configure defaults via the `.env ` file:
+## Environment Variables (optional)
 
 ```env
 R2S_TIMEOUT=10
 R2S_THREADS=10
 R2S_VERIFY_SSL=false
 R2S_WAF_BYPASS_SIZE=128
-````
+```
 
+## License
+
+GNU GPL 3.0 License
