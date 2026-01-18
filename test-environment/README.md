@@ -2,14 +2,14 @@
 
 ## Setup
 
-### Using Docker
+### Using Docker Compose
 
 ```bash
-# Build the image
-docker build -t vuln-nextjs .
+# Run the test environment
+docker-compose up
 
-# Run the container (isolated network recommended)
-docker run --rm -p 3000:3000 --network none vuln-nextjs
+# To run in background
+docker-compose up -d
 ```
 
 ### Manual Setup
@@ -31,18 +31,15 @@ Once the application is running:
 
 ```bash
 # From project root
-./react2shell -u http://localhost:3000 --safe-check
+./react2shell_macos_apple_silicon -u http://localhost:3000 --safe-check
 
 # If vulnerable, try exploit
-./react2shell -u http://localhost:3000 --exploit -c "id"
+./react2shell_macos_apple_silicon -u http://localhost:3000 --exploit -c "id"
 ```
 
 ## Cleanup
 
 ```bash
-# Stop and remove container
-docker stop $(docker ps -q --filter ancestor=vuln-nextjs)
-
-# Remove image
-docker rmi vuln-nextjs
+# Stop and remove the container
+docker-compose down
 ```
